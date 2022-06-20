@@ -1,4 +1,4 @@
-package datastructures;
+package datastructures.level1;
 
 import java.math.BigInteger;
 import java.util.Scanner;

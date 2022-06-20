@@ -4,7 +4,7 @@
  * Date: 15-06-2022
  */
 
-package datastructures;
+package datastructures.level1;
 
 import java.util.ArrayList;
 import java.util.Scanner;

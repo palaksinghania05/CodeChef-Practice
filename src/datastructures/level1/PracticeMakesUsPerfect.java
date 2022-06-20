@@ -1,4 +1,4 @@
-package datastructures;/*
+package datastructures.level1;/*
  * Author Name: Palak Singhania
  * IDE: IntelliJ IDEA Ultimate Edition
  * Date: 15-06-2022

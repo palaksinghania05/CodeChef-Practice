@@ -1,28 +1,25 @@
-/*
+package datastructures.level1;/*
  * Author Name: Palak Singhania
  * IDE: IntelliJ IDEA Ultimate Edition
- * Date: 18-06-2022
+ * Date: 15-06-2022
  */
-
-package datastructures;
 
 import java.util.Scanner;
 
-public class RedLightGreenLight {
+public class ProblemsInTODOList {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();
         while(T>0){
             int N = sc.nextInt();
-            long K = sc.nextLong();
-            int result = 0;
-            long[] arr = new long[N];
+            int[] arr = new int[N];
+            int count = 0;
             for (int i = 0; i < N; i++) {
                 arr[i] = sc.nextInt();
-                if(arr[i]>K)
-                    result++;
+                if(arr[i]>=1000)
+                    count++;
             }
-            System.out.println(result);
+            System.out.println(count);
             T--;
         }
     }
