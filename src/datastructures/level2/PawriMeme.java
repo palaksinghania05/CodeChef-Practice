@@ -12,5 +12,11 @@ public class PawriMeme {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();
+        while(T>0){
+            String s = sc.next();
+            String result = s.replaceAll("party","pawri");
+            System.out.println(result);
+            T--;
+        }
     }
 }
