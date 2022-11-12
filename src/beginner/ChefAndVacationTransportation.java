@@ -11,21 +11,20 @@ import java.util.Scanner;
 public class ChefAndVacationTransportation {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        long T = sc.nextLong();
-
-        while (T-->0)
-        {
-            long X = sc.nextLong();
-            long Y = sc.nextLong();
-            long Z = sc.nextLong();
+        int T = sc.nextInt();
+        while (T>0) {
+            int X = sc.nextInt();
+            int Y = sc.nextInt();
+            int Z = sc.nextInt();
 
             if((X+Y)>Z)
                 System.out.println("TRAIN");
             else if ((X+Y)<Z) {
                 System.out.println("PLANEBUS");
-            } else if ((X+Y)==Z) {
+            } else{
                 System.out.println("EQUAL");
             }
+            T--;
         }
     }
 }
