@@ -14,15 +14,17 @@ public class PenaltyShots {
         int T = sc.nextInt();
         while (T > 0) {
             int[] arr = new int[10];
-            for (int i = 0; i < arr.length; i++) {
+            for (int i = 0; i < 10; i++) {
                 arr[i] = sc.nextInt();
             }
             int teamA = 0, teamB = 0;
             for (int i = 0; i < 10; i++) {
-                if (i % 2 == 0 && arr[i] == 1)
-                    teamA++;
-                else if (i % 2 != 0 && arr[i] == 1)
-                    teamB++;
+                if (arr[i] == 1) {
+                    if (i % 2 == 0)
+                        teamA++;
+                    else
+                        teamB++;
+                }
             }
             if (teamA > teamB)
                 System.out.println(1);
