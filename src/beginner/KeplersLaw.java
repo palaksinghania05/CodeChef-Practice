@@ -17,10 +17,9 @@ public class KeplersLaw {
             int T2 = sc.nextInt();
             int R1 = sc.nextInt();
             int R2 = sc.nextInt();
-
-            double k1 = (1.0 * T1 * T1) / (R1 * R1 * R1);
-            double k2 = (1.0 * T2 * T2) / (R2 * R2 * R2);
-            if (k2 == k1)
+            double planet1 = (1.0 * T1 * T1) / (R1 * R1 * R1);
+            double planet2 = (1.0 * T2 * T2) / (R2 * R2 * R2);
+            if (planet2 == planet1)
                 System.out.println("Yes");
             else
                 System.out.println("No");

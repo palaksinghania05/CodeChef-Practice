@@ -10,18 +10,19 @@ import java.util.Scanner;
 
 public class LuckyFour {
     public static void main(String[] args) {
-        int t;
+        int T;
         Scanner sc = new Scanner(System.in);
-        t = sc.nextInt();
-        for(int i=0;i<t;i++){
-            String s = sc.next();
-            int count=0;
-            for(int j=0;j<s.length();j++){
-                if(s.charAt(j)=='4'){
+        T = sc.nextInt();
+        while (T > 0) {
+            String number = sc.next();
+            int count = 0;
+            for (int j = 0; j < number.length(); j++) {
+                if (number.charAt(j) == '4') {
                     count++;
                 }
             }
             System.out.println(count);
+            T--;
         }
     }
 }
