@@ -8,25 +8,25 @@ public class ABooks {
         int T = sc.nextInt();
         while (T > 0) {
             int N = sc.nextInt();
-            int[] arr = new int[N];
+            int[] arrA = new int[N];
             for (int i = 0; i < N; i++) {
-                arr[i] = sc.nextInt();
+                arrA[i] = sc.nextInt();
             }
-            int[] arr1 = new int[N];
+            int[] arrB = new int[N];
             for (int i = 0; i < N; i++) {
                 int count = 0;
                 for (int j = 0; j < N; j++) {
                     if (i == j) {
                         continue;
                     }
-                    if (arr[j] > arr[i]) {
+                    if (arrA[j] > arrA[i]) {
                         count++;
                     }
                 }
-                arr1[i] = count;
+                arrB[i] = count;
             }
             for (int j = 0; j < N; j++) {
-                System.out.print(arr1[j] + " ");
+                System.out.print(arrB[j] + " ");
             }
             System.out.println();
             T--;
