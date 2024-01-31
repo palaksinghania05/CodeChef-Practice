@@ -7,22 +7,25 @@ public class ChefAndNotebooks {
         Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();
         while (T > 0) {
-            int[] inputs = new int[4];
-            for (int i = 0; i < inputs.length; i++) {
-                inputs[i] = sc.nextInt();
-            }
+            int X = sc.nextInt();
+            int Y = sc.nextInt();
+            int K = sc.nextInt();
+            int N = sc.nextInt();
             boolean flag = false;
-            for (int i = 0; i < inputs[3]; i++) {
-                int Pi = sc.nextInt();
-                int Ci = sc.nextInt();
-                if ((inputs[1] + Pi) >= inputs[0] && Ci <= inputs[2]) {
+            int[] Pi = new int[N];
+            int[] Ci = new int[N];
+            int temp = X - Y;
+            for (int i = 0; i < N; i++) {
+                Pi[i] = sc.nextInt();
+                Ci[i] = sc.nextInt();
+                if (Pi[i] >= temp && Ci[i] <= K) {
                     flag = true;
                 }
             }
-            if (flag)
-                System.out.println("LuckyChef");
-            else
+            if (!flag) {
                 System.out.println("UnluckyChef");
+            } else
+                System.out.println("LuckyChef");
             T--;
         }
     }
