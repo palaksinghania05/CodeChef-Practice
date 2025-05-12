@@ -12,29 +12,30 @@ You have to write a program which detects if a given permutation is ambiguous or
 
 package beginner;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class AmbiguousPermutations {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        while (sc.hasNext()) {
-            int N = sc.nextInt();
-            if (N != 0) {
-                ArrayList<Integer> arr = new ArrayList<>();
-                for (int i = 0; i < N; i++) {
-                    arr.add(sc.nextInt());
-                }
-                System.out.println(arr);
-                ArrayList<Integer> inverse = new ArrayList<>();
-                for (int i = 0; i < N; i++) {
-                    inverse.add(arr.indexOf(i + 1) + 1);
-                }
-                System.out.println(inverse);
-                if (arr.equals(inverse))
-                    System.out.println("ambiguous");
-                else
-                    System.out.println("not ambiguous");
+        while (true) {
+            int T = sc.nextInt();
+            if (T == 0) {
+                break;
+            }
+            int[] A = new int[T];
+            for (int i = 0; i < T; i++) {
+                int ele = sc.nextInt();
+                A[i] = ele;
+            }
+            int[] b = new int[T];
+            for (int i = 0; i < T; i++) {
+                b[A[i] - 1] = i + 1;
+            }
+            if (Arrays.equals(A, b)) {
+                System.out.println("ambiguous");
+            } else {
+                System.out.println("not ambiguous");
             }
         }
     }
