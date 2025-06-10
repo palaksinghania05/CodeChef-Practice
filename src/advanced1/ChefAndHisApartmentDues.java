@@ -18,7 +18,6 @@ public class ChefAndHisApartmentDues {
                 } else {
                     if (result - 1000 != 0 && result > 0)
                         result += 100;
-
                 }
             }
             System.out.println(result);
