@@ -16,7 +16,7 @@ public class MaximAndDividers {
                     if (temp1.contains("7") || temp1.contains("4")) {
                         result++;
                     }
-                    if (!(temp1.equals(temp2))) { //IGNORE PERFECT SQ
+                    if (!(temp1.equals(temp2))) {
                         if (temp2.contains("7") || temp2.contains("4")) {
                             result++;
                         }
